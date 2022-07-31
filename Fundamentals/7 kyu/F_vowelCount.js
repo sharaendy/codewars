@@ -2,6 +2,7 @@
 // We will consider a, e, i, o, u as vowels for this Kata (but not y).
 // The input string will only consist of lower case letters and/or spaces.
 
+//! 1
 function getCount(str) {
   return str.split('').filter((item) => {
     switch (item) {
@@ -19,4 +20,10 @@ function getCount(str) {
         return false;
     }
   }).length;
+}
+
+//! 2
+function getCount(str) {
+  const template = 'aeiouAEIOU'
+  return str.split('').filter(item => template.includes(item)).length;
 }
